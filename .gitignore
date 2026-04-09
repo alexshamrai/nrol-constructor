@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+
+# Reference materials — copyrighted, local only
+reference/
+*.pdf
+*.xlsx
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
