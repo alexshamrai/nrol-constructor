@@ -1,0 +1,7 @@
+node_modules
+reference
+*.pdf
+*.xlsx
+.git
+.gitignore
+README.md
