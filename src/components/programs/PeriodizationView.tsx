@@ -42,7 +42,6 @@ export function PeriodizationView({ programId, onModeChange }: PeriodizationView
   const { t } = useTranslation();
   const loc = useLocalizedField();
   const isLight = useStore((s) => s.theme) === 'light';
-  const intensityColors = isLight ? intensityColorsLight : intensityColorsDark;
   const phaseColors = isLight ? phaseColorsLight : phaseColorsDark;
   const [mode, setModeInternal] = useState<PeriodizationMode>('undulating');
 
