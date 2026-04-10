@@ -5,7 +5,6 @@ import {
   Dumbbell,
   ClipboardList,
   Calendar,
-  Settings,
   Moon,
   Sun,
 } from 'lucide-react';
@@ -17,7 +16,6 @@ const navItems = [
   { to: '/exercises', labelKey: 'nav.exercises', icon: Dumbbell },
   { to: '/programs', labelKey: 'nav.programs', icon: ClipboardList },
   { to: '/planner', labelKey: 'nav.planner', icon: Calendar },
-  { to: '/settings', labelKey: 'nav.settings', icon: Settings },
 ] as const;
 
 export function Header() {

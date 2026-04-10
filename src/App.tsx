@@ -6,8 +6,6 @@ const HomePage = lazy(() => import('./pages/HomePage'));
 const ExercisesPage = lazy(() => import('./pages/ExercisesPage'));
 const ProgramPage = lazy(() => import('./pages/ProgramPage'));
 const PlannerPage = lazy(() => import('./pages/PlannerPage'));
-const SettingsPage = lazy(() => import('./pages/SettingsPage'));
-
 function App() {
   return (
     <Suspense
@@ -24,7 +22,6 @@ function App() {
           <Route path="/programs" element={<ProgramPage />} />
           <Route path="/programs/:programId" element={<ProgramPage />} />
           <Route path="/planner" element={<PlannerPage />} />
-          <Route path="/settings" element={<SettingsPage />} />
         </Route>
       </Routes>
     </Suspense>

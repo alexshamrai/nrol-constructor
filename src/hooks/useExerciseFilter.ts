@@ -19,6 +19,13 @@ export function useExerciseFilter() {
   const [levelFilter, setLevelFilter] = useState<number | 'all'>('all');
   const [availabilityFilter, setAvailabilityFilter] = useState<ExerciseAvailability | 'all'>('all');
 
+  const resetFilters = () => {
+    setSearchQuery('');
+    setPatternFilter('all');
+    setLevelFilter('all');
+    setAvailabilityFilter('all');
+  };
+
   const filteredExercises = useMemo(() => {
     const query = searchQuery.toLowerCase().trim();
 
@@ -65,5 +72,6 @@ export function useExerciseFilter() {
     setPatternFilter,
     setLevelFilter,
     setAvailabilityFilter,
+    resetFilters,
   };
 }
