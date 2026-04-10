@@ -15,6 +15,7 @@
     "description": "Configure your training year based on The New Rules of Lifting Supercharged",
     "quickStart": "Quick Start",
     "selectEquipment": "Select your equipment to begin",
+    "browseExercises": "Browse exercises and check availability",
     "currentPlan": "Current Plan",
     "noPlan": "No training plan configured yet",
     "phases": "3 Training Phases",
@@ -142,6 +143,7 @@
     "loading": "Loading...",
     "noResults": "No results found",
     "seconds": "s",
-    "minutes": "min"
+    "minutes": "min",
+    "clearFilters": "Clear Filters"
   }
 }

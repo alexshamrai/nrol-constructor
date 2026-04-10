@@ -24,6 +24,7 @@ export function ExerciseCatalog() {
     setPatternFilter,
     setLevelFilter,
     setAvailabilityFilter,
+    resetFilters,
   } = useExerciseFilter();
 
   const [selectedExercise, setSelectedExercise] = useState<Exercise | null>(null);
@@ -44,6 +45,7 @@ export function ExerciseCatalog() {
         setPatternFilter={setPatternFilter}
         setLevelFilter={setLevelFilter}
         setAvailabilityFilter={setAvailabilityFilter}
+        onReset={resetFilters}
       />
 
       {/* Count */}

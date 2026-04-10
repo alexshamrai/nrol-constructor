@@ -8,6 +8,7 @@ import { WorkoutView } from './WorkoutView';
 import { PeriodizationView } from './PeriodizationView';
 import { SessionPlan } from './SessionPlan';
 import { ExerciseSwapModal } from '../exercises/ExerciseSwapModal';
+import { CollapsibleEquipmentPanel } from '../equipment/CollapsibleEquipmentPanel';
 // Lazy import exports to avoid bundling jspdf+xlsx into main chunk
 const exportProgramPdf = (...args: Parameters<typeof import('../../utils/exportProgram').exportProgramPdf>) =>
   import('../../utils/exportProgram').then((m) => m.exportProgramPdf(...args));
@@ -125,6 +126,9 @@ export function ProgramConfigurator({ programId }: ProgramConfiguratorProps) {
           />
         </section>
       )}
+
+      {/* Equipment */}
+      <CollapsibleEquipmentPanel />
 
       {/* Workout tabs */}
       <section className="space-y-4">

@@ -15,6 +15,7 @@
     "description": "Налаштуйте свій тренувальний рік за книгою The New Rules of Lifting Supercharged",
     "quickStart": "Швидкий старт",
     "selectEquipment": "Оберіть обладнання для початку",
+    "browseExercises": "Переглянути вправи та перевірити доступність",
     "currentPlan": "Поточний план",
     "noPlan": "Тренувальний план ще не налаштований",
     "phases": "3 фази тренувань",
@@ -142,6 +143,7 @@
     "loading": "Завантаження...",
     "noResults": "Нічого не знайдено",
     "seconds": "с",
-    "minutes": "хв"
+    "minutes": "хв",
+    "clearFilters": "Скинути фільтри"
   }
 }

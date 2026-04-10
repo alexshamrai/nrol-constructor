@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Dumbbell, TrendingUp, Zap, ArrowRight, Calendar } from 'lucide-react';
+import { Dumbbell, TrendingUp, Zap, ArrowRight } from 'lucide-react';
 import { useStore } from '../store/useStore';
 
 const phaseCards = [
@@ -87,18 +87,18 @@ export default function HomePage() {
         </Link>
 
         <Link
-          to="/settings"
+          to="/exercises"
           className="group flex items-center justify-between rounded-lg p-6 transition-colors hover:opacity-90"
           style={{ backgroundColor: 'var(--bg-secondary)' }}
         >
           <div className="flex items-center gap-4">
-            <Calendar className="h-8 w-8 text-green-400" />
+            <Dumbbell className="h-8 w-8 text-green-400" />
             <div>
               <h3 className="font-semibold text-lg">
-                {t('equipment.title')}
+                {t('nav.exercises')}
               </h3>
               <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
-                {t('home.selectEquipment')}
+                {t('home.browseExercises')}
               </p>
             </div>
           </div>

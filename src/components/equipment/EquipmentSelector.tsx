@@ -68,7 +68,7 @@ export function EquipmentSelector({ compact = false }: EquipmentSelectorProps) {
         <h3 className="text-sm font-semibold uppercase mb-2" style={{ color: 'var(--text-muted)' }}>
           {t('exercises.equipment')}
         </h3>
-        <div className={`grid ${compact ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3'} gap-1`}>
+        <div className={`grid ${compact ? 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4' : 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3'} gap-1`}>
           {equipmentItems.map((item) => {
             const isChecked = equipment.includes(item.id);
             return (
