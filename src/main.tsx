@@ -22,7 +22,7 @@ function ThemeSync() {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/nrol-constructor">
       <ThemeSync />
       <App />
     </BrowserRouter>
