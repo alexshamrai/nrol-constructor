@@ -6,6 +6,7 @@ const HomePage = lazy(() => import('./pages/HomePage'));
 const ExercisesPage = lazy(() => import('./pages/ExercisesPage'));
 const ProgramPage = lazy(() => import('./pages/ProgramPage'));
 const PlannerPage = lazy(() => import('./pages/PlannerPage'));
+const WarmupPage = lazy(() => import('./pages/WarmupPage'));
 function App() {
   return (
     <Suspense
@@ -22,6 +23,7 @@ function App() {
           <Route path="/programs" element={<ProgramPage />} />
           <Route path="/programs/:programId" element={<ProgramPage />} />
           <Route path="/planner" element={<PlannerPage />} />
+          <Route path="/warmup" element={<WarmupPage />} />
         </Route>
       </Routes>
     </Suspense>

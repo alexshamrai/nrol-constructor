@@ -7,6 +7,7 @@
     "home": "Home",
     "exercises": "Exercises",
     "programs": "Programs",
+    "warmup": "Warm-up",
     "planner": "Year Planner",
     "settings": "Settings"
   },
@@ -130,6 +131,27 @@
     "core_dynamic": "Core: Dynamic",
     "combination": "Combination",
     "power": "Power"
+  },
+  "warmup": {
+    "title": "RAMP Warm-up",
+    "subtitle": "Every workout in NROL Supercharged begins with RAMP — Range of motion, Activation, and Movement Preparation. ~10 minutes (Chapter 17). Configure your routine below.",
+    "panelTitle": "Warm-up — start every workout here",
+    "workoutNote": "Each workout begins with the RAMP protocol from Chapter 17 — about 10 minutes before the strength work.",
+    "workoutNoteShort": "Start with RAMP.",
+    "configure": "Configure RAMP",
+    "exercise": "Exercise",
+    "exercisesShort": "exercises",
+    "empty": "No exercises selected. Configure your RAMP routine.",
+    "libraryTitle": "Exercise library (Chapter 17)",
+    "resetDefault": "Reset to book default",
+    "previewTitle": "Your routine",
+    "previewBlurb": "This is what you'll do before every workout, in this order.",
+    "validValid": "Routine follows the book's R + A + M structure.",
+    "validIncomplete": "Routine should include at least one exercise from each: Range of motion, Activation, and Movement preparation.",
+    "rule": {
+      "title": "Book rule (Chapter 17)",
+      "body": "RAMP = Range of motion + Activation + Movement Preparation. Pick at least one from each category. Locomotion drills (high knees, carioca, etc.) raise your core temperature and prime your nervous system right before lifting."
+    }
   },
   "common": {
     "save": "Save",

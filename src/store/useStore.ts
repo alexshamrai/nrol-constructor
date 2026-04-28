@@ -6,6 +6,7 @@ import type {
   TrainingPlan,
   ProgramId,
 } from '../types';
+import { defaultRampSelection } from '../data/warmup';
 
 interface AppState {
   // Equipment
@@ -26,6 +27,12 @@ interface AppState {
   updateTrainingPlan: (id: string, updates: Partial<TrainingPlan>) => void;
   removeTrainingPlan: (id: string) => void;
   setActiveTrainingPlan: (id: string | null) => void;
+
+  // RAMP warm-up configuration (Chapter 17)
+  rampSelectedIds: string[];
+  toggleRampExercise: (id: string) => void;
+  reorderRamp: (ids: string[]) => void;
+  resetRamp: () => void;
 
   // UI state
   language: 'en' | 'ua';
@@ -93,6 +100,17 @@ export const useStore = create<AppState>()(
         })),
       setActiveTrainingPlan: (id) => set({ activeTrainingPlanId: id }),
 
+      // RAMP warm-up
+      rampSelectedIds: [...defaultRampSelection],
+      toggleRampExercise: (id) =>
+        set((state) => ({
+          rampSelectedIds: state.rampSelectedIds.includes(id)
+            ? state.rampSelectedIds.filter((x) => x !== id)
+            : [...state.rampSelectedIds, id],
+        })),
+      reorderRamp: (ids) => set({ rampSelectedIds: ids }),
+      resetRamp: () => set({ rampSelectedIds: [...defaultRampSelection] }),
+
       // UI
       language: 'en',
       setLanguage: (language) => set({ language }),
@@ -106,6 +124,7 @@ export const useStore = create<AppState>()(
         configuredPrograms: state.configuredPrograms,
         trainingPlans: state.trainingPlans,
         activeTrainingPlanId: state.activeTrainingPlanId,
+        rampSelectedIds: state.rampSelectedIds,
         language: state.language,
         theme: state.theme,
       }),

@@ -179,19 +179,28 @@ export interface EquipmentPreset {
   items: EquipmentItem[];
 }
 
-// RAMP warmup exercise
+// RAMP warmup (Chapter 17)
+export type WarmupCategory =
+  | 'range_of_motion'   // R — joint mobility
+  | 'activation'         // A — wake up muscles
+  | 'movement_prep'      // M — mobility drills
+  | 'locomotion';        // M — locomotion drills (final adrenaline burst)
+
 export interface WarmupExercise {
-  order: string;
-  category: 'range_of_motion' | 'activation' | 'movement_prep';
+  id: string;
+  category: WarmupCategory;
   nameEn: string;
   nameUa: string;
   sets: number;
   reps: string;
   descriptionEn: string;
   descriptionUa: string;
+  // Book's progression hint — earliest phase where Alwyn introduces this exercise.
+  // Lower = beginner-friendly (BT). Higher = more advanced (S&P).
+  introducedIn: ProgramPhase;
 }
 
-export interface WarmupProtocol {
-  programPhase: ProgramPhase;
-  exercises: WarmupExercise[];
+// User's customized RAMP — list of enabled exercise ids in order.
+export interface RampConfiguration {
+  selectedIds: string[];
 }

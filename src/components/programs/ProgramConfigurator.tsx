@@ -9,6 +9,7 @@ import { PeriodizationView } from './PeriodizationView';
 import { SessionPlan } from './SessionPlan';
 import { ExerciseSwapModal } from '../exercises/ExerciseSwapModal';
 import { CollapsibleEquipmentPanel } from '../equipment/CollapsibleEquipmentPanel';
+import { WarmupPanel } from '../warmup/WarmupPanel';
 // Lazy import exports to avoid bundling jspdf+xlsx into main chunk
 const exportProgramPdf = (...args: Parameters<typeof import('../../utils/exportProgram').exportProgramPdf>) =>
   import('../../utils/exportProgram').then((m) => m.exportProgramPdf(...args));
@@ -129,6 +130,9 @@ export function ProgramConfigurator({ programId }: ProgramConfiguratorProps) {
 
       {/* Equipment */}
       <CollapsibleEquipmentPanel />
+
+      {/* RAMP warm-up — Chapter 17 protocol applied to every workout */}
+      <WarmupPanel />
 
       {/* Workout tabs */}
       <section className="space-y-4">

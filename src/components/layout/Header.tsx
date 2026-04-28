@@ -5,6 +5,7 @@ import {
   Dumbbell,
   ClipboardList,
   Calendar,
+  Flame,
   Moon,
   Sun,
 } from 'lucide-react';
@@ -15,6 +16,7 @@ const navItems = [
   { to: '/', labelKey: 'nav.home', icon: Home },
   { to: '/exercises', labelKey: 'nav.exercises', icon: Dumbbell },
   { to: '/programs', labelKey: 'nav.programs', icon: ClipboardList },
+  { to: '/warmup', labelKey: 'nav.warmup', icon: Flame },
   { to: '/planner', labelKey: 'nav.planner', icon: Calendar },
 ] as const;
 

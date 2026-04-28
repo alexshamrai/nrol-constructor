@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeftRight } from 'lucide-react';
+import { ArrowLeftRight, Flame } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLocalizedField } from '../../hooks/useLocalizedField';
 import { useThemeClass } from '../../hooks/useThemeClass';
 import { exercises } from '../../data/exercises';
@@ -47,6 +48,20 @@ export function WorkoutView({ workout, programId: _programId, exerciseSelections
         <h3 className="text-base font-semibold" style={{ color: 'var(--text-primary)' }}>
           {t('programs.workout')} {workout.label}
         </h3>
+      </div>
+
+      {/* RAMP warm-up note (Chapter 17) */}
+      <div
+        className={`flex items-start gap-2 border-b border-l-4 px-4 py-2 text-xs ${tc.yellow}`}
+      >
+        <Flame className="mt-0.5 h-3.5 w-3.5 flex-shrink-0" />
+        <div className="flex-1 leading-relaxed">
+          <span className="font-semibold">{t('warmup.workoutNoteShort')}</span>{' '}
+          {t('warmup.workoutNote')}{' '}
+          <Link to="/warmup" className="underline hover:opacity-80">
+            {t('warmup.configure')}
+          </Link>
+        </div>
       </div>
 
       {/* Table */}
