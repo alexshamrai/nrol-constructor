@@ -180,11 +180,12 @@ export interface EquipmentPreset {
 }
 
 // RAMP warmup (Chapter 17)
+// Book's acronym is R-A-M. Locomotion drills (jog, shuffle, high-knee, carioca)
+// are the "faster exercises at the end" of Movement Preparation, not a fourth category.
 export type WarmupCategory =
   | 'range_of_motion'   // R — joint mobility
   | 'activation'         // A — wake up muscles
-  | 'movement_prep'      // M — mobility drills
-  | 'locomotion';        // M — locomotion drills (final adrenaline burst)
+  | 'movement_prep';     // M — mobility + locomotion drills
 
 export interface WarmupExercise {
   id: string;
@@ -195,9 +196,6 @@ export interface WarmupExercise {
   reps: string;
   descriptionEn: string;
   descriptionUa: string;
-  // Book's progression hint — earliest phase where Alwyn introduces this exercise.
-  // Lower = beginner-friendly (BT). Higher = more advanced (S&P).
-  introducedIn: ProgramPhase;
 }
 
 // User's customized RAMP — list of enabled exercise ids in order.
