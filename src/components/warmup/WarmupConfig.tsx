@@ -36,18 +36,10 @@ const categories: CategoryMeta[] = [
   {
     key: 'movement_prep',
     tag: 'M',
-    titleEn: 'Movement Preparation — Mobility',
-    titleUa: 'Підготовка руху — мобільність',
-    blurbEn: 'Body ready to act and react in a coordinated, athletic way — all limbs, all directions.',
-    blurbUa: 'Тіло готове діяти і реагувати скоординовано — усі кінцівки, усі напрямки.',
-  },
-  {
-    key: 'locomotion',
-    tag: 'M+',
-    titleEn: 'Movement Preparation — Locomotion',
-    titleUa: 'Підготовка руху — локомоція',
-    blurbEn: 'Faster final exercises — adrenaline burst, raises core temperature, primes you to lift.',
-    blurbUa: 'Швидші фінальні вправи — викид адреналіну, підняття температури, готовність піднімати.',
+    titleEn: 'Movement Preparation',
+    titleUa: 'Підготовка руху',
+    blurbEn: 'Coordinated, athletic movement in all directions. Ends with faster locomotion drills (jog, shuffle, high-knee, carioca) for the adrenaline burst right before lifting.',
+    blurbUa: 'Скоординований, атлетичний рух в усіх напрямках. Завершується швидшими локомоторними вправами (біг, shuffle, високі коліна, каріока) — викид адреналіну перед самим підніманням.',
   },
 ];
 
@@ -63,12 +55,10 @@ export function WarmupConfig() {
   const selectedSet = new Set(selectedIds);
   const selectedExercises = getRampExercises(selectedIds);
 
-  // Validation: book rule says R + A + M (movement_prep OR locomotion).
+  // Validation: book rule says R + A + M.
   const hasR = selectedExercises.some((e) => e.category === 'range_of_motion');
   const hasA = selectedExercises.some((e) => e.category === 'activation');
-  const hasM = selectedExercises.some(
-    (e) => e.category === 'movement_prep' || e.category === 'locomotion',
-  );
+  const hasM = selectedExercises.some((e) => e.category === 'movement_prep');
   const isValid = hasR && hasA && hasM;
 
   return (

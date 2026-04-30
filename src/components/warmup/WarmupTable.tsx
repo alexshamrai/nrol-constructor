@@ -12,15 +12,13 @@ interface WarmupTableProps {
 const categoryLabel: Record<WarmupCategory, { en: string; ua: string; tag: string }> = {
   range_of_motion: { en: 'Range of Motion', ua: 'Амплітуда руху', tag: 'R' },
   activation: { en: 'Activation', ua: 'Активація', tag: 'A' },
-  movement_prep: { en: 'Movement Prep', ua: 'Підготовка руху', tag: 'M' },
-  locomotion: { en: 'Locomotion', ua: 'Локомоція', tag: 'M+' },
+  movement_prep: { en: 'Movement Preparation', ua: 'Підготовка руху', tag: 'M' },
 };
 
 const categoryOrder: WarmupCategory[] = [
   'range_of_motion',
   'activation',
   'movement_prep',
-  'locomotion',
 ];
 
 export function WarmupTable({ exercises, showDescriptions = false }: WarmupTableProps) {
